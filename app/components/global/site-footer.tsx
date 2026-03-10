@@ -47,7 +47,17 @@ export function SiteFooter() {
 
         <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Ovatem. All rights reserved.</p>
-          <p>Built with Next.js</p>
+          <p className="flex flex-wrap items-center gap-1">
+            Built by{" "}
+            <a
+              href="https://victorola.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:underline"
+            >
+              VickyJay
+            </a>
+          </p>
         </div>
       </div>
     </footer>
