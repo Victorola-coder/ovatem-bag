@@ -24,7 +24,7 @@ export default function Input({
             {...(props as React.TextareaHTMLAttributes<HTMLTextAreaElement>)}
             placeholder={placeholder}
             className={clsx(
-              "w-full bg-dark-200 p-4 rounded-[12px] text-white placeholder:text-[#FFFFFF80] font-aloe text-base leading-[22.4px] focus:outline-none focus:ring-0",
+              "w-full bg-background-soft p-4 rounded-[12px] text-brand-eden placeholder:text-brand-viridianGreen font-aloe text-base leading-[22.4px] focus:outline-none focus:ring-0",
               error && "border-1 border-red-500"
             )}
           />
@@ -35,7 +35,7 @@ export default function Input({
             placeholder={placeholder}
             autoComplete="off"
             className={clsx(
-              "w-full bg-dark-200 h-full p-4 rounded-[12px] text-white placeholder:text-[#FFFFFF80] font-aloe text-base leading-[22.4px] focus:outline-none focus:ring-0",
+              "w-full bg-background-soft h-full p-4 rounded-[12px] text-brand-eden placeholder:text-brand-viridianGreen font-aloe text-base leading-[22.4px] focus:outline-none focus:ring-0",
               error && "border-1 border-red-500",
               type === "password" && "pr-12"
             )}
@@ -44,9 +44,11 @@ export default function Input({
         {type === "password" && (
           <span
             onClick={() => setShowPassword(!showPassword)}
-            className="absolute right-4 top-1/2 -translate-y-1/2 text-[#FFFFFF80] hover:text-white transition-colors"
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-brand-viridianGreen hover:text-brand-eden transition-colors"
           >
-            <EyeIcon fill={showPassword ? "white" : "#FFFFFF80"} />
+            <EyeIcon
+              fill={showPassword ? "var(--eden)" : "var(--viridian_green)"}
+            />
           </span>
         )}
       </div>

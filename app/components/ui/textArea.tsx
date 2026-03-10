@@ -13,8 +13,8 @@ export default function Textarea({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className={`w-full min-h-[153px] md:min-h-[180px] bg-dark-100/80 rounded-[24px] p-4
-        text-white placeholder:text-[#FFFFFF4D] font-aloe text-[16px] 
+      className={`w-full min-h-[153px] md:min-h-[180px] bg-background-soft rounded-[24px] p-4
+        text-brand-eden placeholder:text-brand-viridianGreen font-aloe text-[16px] 
         resize-none focus:outline-none focus:ring-0 ${className}`}
     />
   );

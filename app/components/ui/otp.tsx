@@ -104,7 +104,7 @@ export default function OTP() {
             inputMode="numeric"
             value={otpState[key]}
             id={`otp-${index + 1}`}
-            className="w-12 h-12 text-center bg-dark-200 p-4 rounded-[12px] text-white placeholder:text-[#FFFFFF80] font-aloeSemBold text-[24px] leading-[22.4px] focus:outline-none focus:ring-0"
+            className="w-12 h-12 text-center bg-background-soft p-4 rounded-[12px] text-brand-eden placeholder:text-brand-viridianGreen font-aloeSemBold text-[24px] leading-[22.4px] focus:outline-none focus:ring-0"
             onPaste={index === 0 ? handleOtpPaste : undefined}
             onChange={(e) => handleOtpChange(e, key)}
             onKeyDown={(e) => {
