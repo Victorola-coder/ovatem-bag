@@ -2,13 +2,14 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "long sitename",
-    short_name: "sitename",
-    description: "sitename description",
+    name: "Ovatem Quality Bag",
+    short_name: "Ovatem",
+    description:
+      "Crafting Excellence. Every Style. Every Story. Premium bags and curated souvenirs.",
     start_url: "/",
     display: "standalone",
-    background_color: "#fff",
-    theme_color: "#fff",
+    background_color: "#eff6f5",
+    theme_color: "#0c4c3c",
     icons: [
       {
         src: "/favicon.ico",

@@ -1,3 +1,8 @@
-# NextJs Template
+# Ovatem Quality Bag
 
-## Make sure you go through every file and edit it to fit what works for you, replace all the contents with actual values.
+Website for Ovatem — a premium bag and curated souvenir brand.
+
+## Brand message
+- **Tagline**: Crafting Excellence. Every Style. Every Story.
+- **Mission**: Craft high-quality stylish bags and thoughtfully curated souvenirs that elevate every occasion.
+- **Positioning**: Premium craftsmanship, warm gifting experiences, and lasting memories.

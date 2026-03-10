@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/"],
       },
     ],
-    sitemap: "https://sitename.host/sitemap.xml",
+    sitemap: "https://ovatem.ng/sitemap.xml",
   };
 }

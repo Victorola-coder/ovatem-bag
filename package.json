@@ -1,7 +1,8 @@
 {
-  "name": "next-temp",
+  "name": "ovatem-bag",
   "version": "0.1.0",
   "private": true,
+  "description": "Ovatem Quality Bag — premium bags and curated souvenirs. Crafting Excellence. Every Style. Every Story.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

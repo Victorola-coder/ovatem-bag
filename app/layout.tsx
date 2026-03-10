@@ -27,18 +27,26 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nextapptemplate.xyz"),
+  metadataBase: new URL("https://ovatem.ng"),
   icons: {
     icon: "/icon.png",
   },
-  title: "nextjs template",
+  title: "Ovatem Quality Bag",
   description:
-    "I fell in love with next.js, im trying to make a template for it also",
-  applicationName: "next Web Application",
-  authors: [{ name: "nextapp template", url: "https://domainname.host" }],
-  keywords: ["NextJs", "reactjs", "template", "typescript"],
-  creator: "VickyJay",
-  publisher: "VickyJay",
+    "Crafting Excellence. Every Style. Every Story. Premium, high-quality stylish bags and thoughtfully curated souvenirs for every occasion.",
+  applicationName: "Ovatem Quality Bag",
+  authors: [{ name: "Ovatem", url: "https://ovatem.ng" }],
+  keywords: [
+    "Ovatem",
+    "handmade bags in Nigeria",
+    "premium bags",
+    "leather bags",
+    "souvenirs",
+    "custom gifting",
+    "bag making training",
+  ],
+  creator: "Ovatem",
+  publisher: "Ovatem",
   generator: "Next.js",
   referrer: "origin",
   robots: {
@@ -47,41 +55,29 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: "https://domainname.host",
-    title: "Nextjs template",
-    siteName: "nextapp template",
+    url: "https://ovatem.ng",
+    title: "Ovatem Quality Bag",
+    siteName: "Ovatem",
     locale: "en_US",
-    images: [
-      {
-        url: "linktoopengraphimage.cdn",
-        width: 1200,
-        height: 630,
-        alt: "next OG Image",
-      },
-    ],
   },
   twitter: {
-    site: "nextapp",
-    creator: "socialmediahandle",
-    title:
-      "nextapp template - I fell in love with next.js, im trying to make a template for it tooo",
+    title: "Ovatem Quality Bag",
     description:
-      "I fell in love with next.js, im trying to make a template for it too",
+      "Crafting Excellence. Every Style. Every Story. Premium, high-quality stylish bags and thoughtfully curated souvenirs for every occasion.",
     card: "summary_large_image",
-    images: ["linktoopengraph.com"],
   },
   appleWebApp: {
     capable: true,
-    title: "nextapp template",
+    title: "Ovatem Quality Bag",
     statusBarStyle: "black-translucent",
   },
   formatDetection: {
     telephone: false,
   },
   abstract:
-    "I fell in love with next.js, im trying to make a template for it tooo",
-  category: "Social",
-  classification: "Social",
+    "Premium bags and curated souvenirs crafted with excellence.",
+  category: "Shopping",
+  classification: "Shopping",
 };
 
 export default function RootLayout({

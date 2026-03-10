@@ -69,11 +69,11 @@ export default function Home() {
                 variant="secondary"
                 onClick={() =>
                   window.open(
-                    "https://github.com/victorola-coder/next-template"
+                    "https://ovatem.ng"
                   )
                 }
               >
-                View on GitHub
+                Visit Ovatem
               </Button>
             </div>
           </div>
