@@ -66,7 +66,7 @@ export function MultiSelect({
         onClick={() => !disabled && setIsOpen(true)}
         className={clsx(
           "min-h-[42px] px-3 py-2 rounded-lg border cursor-pointer",
-          "bg-[#1A1A1A] transition-colors",
+          "bg-dark-200 transition-colors",
           error ? "border-red-500" : "border-[#FFFFFF20]",
           !disabled && "hover:border-primary",
           disabled && "opacity-50 cursor-not-allowed"
@@ -97,7 +97,7 @@ export function MultiSelect({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-50 w-full mt-2 bg-[#1A1A1A] border border-[#FFFFFF20] rounded-lg shadow-xl overflow-hidden"
+            className="absolute z-50 w-full mt-2 bg-dark-200 border border-[#FFFFFF20] rounded-lg shadow-xl overflow-hidden"
           >
             {/* Search input */}
             <div className="p-2 border-b border-[#FFFFFF10]">

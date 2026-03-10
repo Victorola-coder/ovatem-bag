@@ -3,7 +3,7 @@
 import { clsx } from "clsx";
 
 const variantStyles = {
-  default: "bg-[#283142] text-white border-[#FFFFFF20]",
+  default: "bg-dark-200 text-white border-[#FFFFFF20]",
   primary: "bg-primary/20 text-primary border-primary/30",
   success: "bg-green-500/20 text-green-400 border-green-500/30",
   warning: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",

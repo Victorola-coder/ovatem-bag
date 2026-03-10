@@ -68,7 +68,7 @@ function AccordionItem({ item, isOpen, onToggle }: AccordionItemProps) {
     <div
       className={clsx(
         "border border-[#FFFFFF20] rounded-lg overflow-hidden",
-        "bg-[#1A1A1A] transition-colors",
+        "bg-dark-200 transition-colors",
         item.disabled && "opacity-50 cursor-not-allowed"
       )}
     >

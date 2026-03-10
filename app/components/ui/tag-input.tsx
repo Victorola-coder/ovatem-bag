@@ -72,7 +72,7 @@ export function TagInput({
       <div
         className={clsx(
           "flex flex-wrap gap-2 p-2 rounded-lg border",
-          "bg-[#1A1A1A] transition-colors min-h-[42px]",
+          "bg-dark-200 transition-colors min-h-[42px]",
           error ? "border-red-500" : "border-[#FFFFFF20]",
           !disabled && "focus-within:border-primary",
           disabled && "opacity-50 cursor-not-allowed"
@@ -113,7 +113,7 @@ export function TagInput({
 
       {/* Suggestions dropdown */}
       {showSuggestions && filteredSuggestions.length > 0 && (
-        <div className="absolute z-10 w-full mt-1 bg-[#1A1A1A] border border-[#FFFFFF20] rounded-lg shadow-lg max-h-48 overflow-auto">
+        <div className="absolute z-10 w-full mt-1 bg-dark-200 border border-[#FFFFFF20] rounded-lg shadow-lg max-h-48 overflow-auto">
           {filteredSuggestions.map((suggestion, index) => (
             <button
               key={index}

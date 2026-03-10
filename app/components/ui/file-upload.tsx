@@ -180,7 +180,7 @@ export function FileUpload({
               key={index}
               className={clsx(
                 "flex items-center gap-3 p-3 rounded-lg border",
-                fileObj.error ? "border-red-500 bg-red-500/10" : "border-[#FFFFFF20] bg-[#1A1A1A]"
+                fileObj.error ? "border-red-500 bg-red-500/10" : "border-[#FFFFFF20] bg-dark-200"
               )}
             >
               {/* Preview */}

@@ -36,7 +36,7 @@ body::-webkit-scrollbar-track-piece {
 
 body::-webkit-scrollbar-thumb {
   @apply transition-all duration-500 
-  rounded-full bg-dark hover:bg-dark/60;
+  rounded-full bg-dark hover:bg-dark-100;
 }
 
 html.lenis {

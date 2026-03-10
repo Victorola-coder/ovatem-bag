@@ -90,7 +90,7 @@ export function Combobox({
         disabled={disabled}
         className={clsx(
           "w-full px-4 py-2 rounded-lg border text-left",
-          "bg-[#1A1A1A] transition-colors flex items-center justify-between",
+          "bg-dark-200 transition-colors flex items-center justify-between",
           error ? "border-red-500" : "border-[#FFFFFF20]",
           !disabled && "hover:border-primary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20",
           disabled && "opacity-50 cursor-not-allowed"
@@ -120,7 +120,7 @@ export function Combobox({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute z-50 w-full mt-2 bg-[#1A1A1A] border border-[#FFFFFF20] rounded-lg shadow-xl overflow-hidden"
+            className="absolute z-50 w-full mt-2 bg-dark-200 border border-[#FFFFFF20] rounded-lg shadow-xl overflow-hidden"
           >
             {/* Search input */}
             <div className="p-2 border-b border-[#FFFFFF10]">

@@ -118,7 +118,7 @@ export function AlertDialog({
               role="alertdialog"
               aria-labelledby="alert-dialog-title"
               aria-describedby="alert-dialog-description"
-              className="bg-[#1A1A1A] border border-[#FFFFFF20] rounded-lg p-6 max-w-md w-full shadow-xl"
+              className="bg-dark-200 border border-[#FFFFFF20] rounded-lg p-6 max-w-md w-full shadow-xl"
             >
               <div className="flex gap-3 mb-4">
                 <div className={clsx("flex-shrink-0", variantStyles[variant].split(" ")[2])}>
@@ -144,7 +144,7 @@ export function AlertDialog({
                 <button
                   onClick={onClose}
                   disabled={loading}
-                  className="px-4 py-2 rounded-lg bg-[#283142] text-white hover:bg-[#3A4558] transition-colors disabled:opacity-50"
+                  className="px-4 py-2 rounded-lg bg-dark-200 text-white hover:bg-dark-100 transition-colors disabled:opacity-50"
                 >
                   {cancelText}
                 </button>

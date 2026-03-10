@@ -45,7 +45,7 @@ export function ColorPicker({
         disabled={disabled}
         className={clsx(
           "flex items-center gap-2 px-3 py-2 rounded-lg border",
-          "bg-[#1A1A1A] border-[#FFFFFF20] transition-colors",
+          "bg-dark-200 border-[#FFFFFF20] transition-colors",
           !disabled && "hover:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20",
           disabled && "opacity-50 cursor-not-allowed"
         )}
@@ -58,7 +58,7 @@ export function ColorPicker({
       </button>
 
       {isOpen && (
-        <div className="absolute z-50 mt-2 p-4 bg-[#1A1A1A] border border-[#FFFFFF20] rounded-lg shadow-xl space-y-4">
+        <div className="absolute z-50 mt-2 p-4 bg-dark-200 border border-[#FFFFFF20] rounded-lg shadow-xl space-y-4">
           {/* Color input */}
           <div className="space-y-2">
             <label className="text-xs text-[#FFFFFF80]">Color</label>
