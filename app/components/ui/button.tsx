@@ -24,14 +24,14 @@ export default function Button(props: ButtonProps) {
           "px-[21px] py-[12.5px] text-[18px]": size === "default",
           "px-3 py-2 text-sm": size === "sm",
           "px-6 py-3 text-lg": size === "lg",
-          "bg-gradient-to-r from-primary-100 to-primary rounded-[10px]  text-white":
+          "bg-gradient-to-r from-primary-100 to-primary rounded-[10px] text-white":
             variant === "default",
           "bg-[#FFFFFF] text-black rounded-[16px]": variant === "secondary",
           "bg-red-500/10 hover:bg-red-500/20 text-red-500":
             variant === "danger",
-          "bg-[#6B39FF] hover:bg-[#6B39FF]/80 rounded-[12px] active:bg-[#6B39FF]/90 text-white":
+          "bg-primary hover:bg-primary/90 rounded-[12px] active:bg-primary/95 text-white":
             variant === "primary",
-          "bg-[#283142] rounded-[12px] text-[#FFFFFF]": variant === "google",
+          "bg-dark-200 rounded-[12px] text-[#FFFFFF]": variant === "google",
         },
         className
       )}

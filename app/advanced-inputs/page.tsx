@@ -22,7 +22,7 @@ export default function AdvancedInputsShowcase() {
   const [comboValue, setComboValue] = useState("");
   const [multiValue, setMultiValue] = useState<string[]>([]);
   const [files, setFiles] = useState<File[]>([]);
-  const [color, setColor] = useState("#6366F1");
+  const [color, setColor] = useState("var(--eden)");
 
   const comboOptions = [
     { value: "react", label: "React" },
@@ -44,7 +44,7 @@ export default function AdvancedInputsShowcase() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#0f0f0f] p-8">
+    <div className="min-h-screen bg-background p-8">
       <div className="max-w-7xl mx-auto space-y-12">
         {/* Header */}
         <div className="text-center space-y-4">

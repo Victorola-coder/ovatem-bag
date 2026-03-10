@@ -77,7 +77,7 @@ export function ColorPicker({
               type="text"
               value={currentValue}
               onChange={(e) => handleColorChange(e.target.value)}
-              className="w-full px-3 py-2 bg-[#0f0f0f] border border-[#FFFFFF20] rounded-lg text-white font-mono text-sm focus:outline-none focus:border-primary"
+              className="w-full px-3 py-2 bg-background border border-[#FFFFFF20] rounded-lg text-white font-mono text-sm focus:outline-none focus:border-primary"
               placeholder="#000000"
             />
           </div>

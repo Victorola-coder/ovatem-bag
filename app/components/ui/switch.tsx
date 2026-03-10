@@ -51,7 +51,7 @@ export function Switch({
         onClick={handleToggle}
         className={clsx(
           "relative inline-flex flex-shrink-0 rounded-full transition-colors",
-          "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#0f0f0f]",
+          "focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background",
           sizeStyles[size].track,
           isChecked ? "bg-primary" : "bg-[#FFFFFF20]",
           disabled && "opacity-50 cursor-not-allowed",

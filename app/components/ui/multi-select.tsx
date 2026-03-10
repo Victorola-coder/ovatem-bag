@@ -107,7 +107,7 @@ export function MultiSelect({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={searchPlaceholder}
-                className="w-full px-3 py-2 bg-[#0f0f0f] border border-[#FFFFFF20] rounded-lg text-white placeholder:text-[#FFFFFF40] focus:outline-none focus:border-primary"
+                className="w-full px-3 py-2 bg-background border border-[#FFFFFF20] rounded-lg text-white placeholder:text-[#FFFFFF40] focus:outline-none focus:border-primary"
               />
             </div>
 

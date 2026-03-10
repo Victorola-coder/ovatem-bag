@@ -3,7 +3,7 @@ export default function Toggle({ checked, onChange, className }: ToggleProps) {
     <button
       type="button"
       className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-        checked ? className || "bg-[#6366F1]" : "bg-[#283142]"
+        checked ? className || "bg-primary" : "bg-dark"
       }`}
       onClick={() => onChange(!checked)}
     >

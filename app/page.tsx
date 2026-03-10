@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <Animation>
-      <div className="min-h-screen bg-[#0f0f0f] p-8">
+      <div className="min-h-screen bg-background p-8">
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header */}
 
@@ -242,11 +242,11 @@ export default function Home() {
                   <span className="text-sm text-[#FFFFFF80]">Primary</span>
                 </div>
                 <div className="space-y-2">
-                  <div className="h-12 rounded-lg bg-[#283142]" />
+                  <div className="h-12 rounded-lg bg-brand-seaNymph" />
                   <span className="text-sm text-[#FFFFFF80]">Secondary</span>
                 </div>
                 <div className="space-y-2">
-                  <div className="h-12 rounded-lg bg-[#6366F1]" />
+                  <div className="h-12 rounded-lg bg-brand-aquaHaze" />
                   <span className="text-sm text-[#FFFFFF80]">Accent</span>
                 </div>
                 <div className="space-y-2">
@@ -262,7 +262,7 @@ export default function Home() {
                 Display Components
               </h2>
               <Card>
-                <div className="bg-[#283142] p-4 rounded-lg">
+                <div className="bg-dark-200 p-4 rounded-lg">
                   <Image
                     src="/images/logo.svg"
                     alt="Placeholder"
@@ -381,7 +381,7 @@ export default function Home() {
               </h2>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <div className="h-20 rounded-lg bg-gradient-to-r from-primary to-[#6366F1]" />
+                  <div className="h-20 rounded-lg bg-gradient-to-r from-primary-100 to-primary" />
                   <span className="text-sm text-[#FFFFFF80]">
                     Primary Gradient
                   </span>
@@ -393,7 +393,7 @@ export default function Home() {
                   </span>
                 </div>
                 <div className="space-y-2">
-                  <div className="h-20 rounded-lg bg-gradient-to-r from-[#283142] to-[#1A202B]" />
+                  <div className="h-20 rounded-lg bg-gradient-to-r from-dark-200 to-dark-100" />
                   <span className="text-sm text-[#FFFFFF80]">
                     Background Gradient
                   </span>

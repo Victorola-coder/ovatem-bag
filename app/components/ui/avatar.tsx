@@ -57,7 +57,7 @@ export function Avatar({
       <div
         className={clsx(
           "flex items-center justify-center overflow-hidden font-semibold",
-          "bg-gradient-to-br from-primary to-[#6366F1]",
+          "bg-gradient-to-br from-primary-100 to-primary",
           "text-white",
           sizeStyles[size],
           shape === "circle" ? "rounded-full" : "rounded-lg"
@@ -79,7 +79,7 @@ export function Avatar({
       {status && (
         <span
           className={clsx(
-            "absolute bottom-0 right-0 block rounded-full ring-2 ring-[#0f0f0f]",
+            "absolute bottom-0 right-0 block rounded-full ring-2 ring-background",
             statusStyles[status],
             statusSizes[size]
           )}
@@ -105,7 +105,7 @@ export function AvatarGroup({
       {displayAvatars.map((avatar, index) => (
         <div
           key={index}
-          className="ring-2 ring-[#0f0f0f] rounded-full"
+          className="ring-2 ring-background rounded-full"
           style={{ zIndex: displayAvatars.length - index }}
         >
           <Avatar {...avatar} size={size} />
@@ -115,7 +115,7 @@ export function AvatarGroup({
         <div
           className={clsx(
             "flex items-center justify-center rounded-full",
-            "bg-[#283142] text-white font-semibold ring-2 ring-[#0f0f0f]",
+            "bg-dark-200 text-white font-semibold ring-2 ring-background",
             sizeStyles[size]
           )}
           style={{ zIndex: 0 }}

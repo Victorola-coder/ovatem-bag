@@ -9,7 +9,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        // if you are using variable and want to use more than one fonts for your webapp,you could define it here. like i did 
         geistSans: ["var(--font-geist-sans)"],
       },
       keyframes: {
@@ -63,20 +62,29 @@ const config: Config = {
         "spin-slow": "spin 20s linear infinite",
       },
       colors: {
+        // Ovatem brand palette (from palette.css)
         primary: {
-          DEFAULT: "#8066FF",
-          100: "#6248E1",
-          200: "#8066FF",
+          DEFAULT: "var(--eden)",
+          100: "var(--sea_nymph)",
+          200: "var(--summer_green)",
+        },
+        background: {
+          DEFAULT: "var(--eden)",
+          soft: "var(--aqua_haze)",
         },
         dark: {
-          DEFAULT: "#141517",
-          100: "#414141",
-          200: "#121212",
-          300: "#676B71",
+          DEFAULT: "var(--viridian_green)",
+          100: "var(--cascade)",
+          200: "var(--pewter)",
         },
-        main: {
-          DEFAULT: "#E1DEF0",
-          100: "#F3EFFD",
+        brand: {
+          aquaHaze: "var(--aqua_haze)",
+          eden: "var(--eden)",
+          seaNymph: "var(--sea_nymph)",
+          viridianGreen: "var(--viridian_green)",
+          cascade: "var(--cascade)",
+          summerGreen: "var(--summer_green)",
+          pewter: "var(--pewter)",
         },
       },
     },
