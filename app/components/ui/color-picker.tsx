@@ -17,7 +17,7 @@ export function ColorPicker({
   const isControlled = value !== undefined;
   const [internalValue, setInternalValue] = useState(defaultValue);
   const [isOpen, setIsOpen] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   const currentValue = isControlled ? value : internalValue;
 
