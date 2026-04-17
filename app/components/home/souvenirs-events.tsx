@@ -1,80 +1,60 @@
-"use client";
-
 import Link from "next/link";
-import { m, LazyMotion, domAnimation } from "framer-motion";
 import { Gift, Heart, PartyPopper } from "lucide-react";
-import { Glow } from "@/app/components/global";
-import { Button } from "@/app/components/ui";
+import { Button, Surface } from "@/app/components/ui";
 
 const EVENTS = [
   {
     title: "Weddings",
-    description: "Coordinated favors and keepsakes guests remember — names, dates, and packaging tailored to your day.",
+    description: "Coordinated favors and keepsakes—names, dates, and packaging aligned to your day.",
     icon: Heart,
   },
   {
     title: "Birthdays & milestones",
-    description: "Thoughtful bags and small batches that match your theme without feeling generic.",
+    description: "Small batches that match your theme without feeling generic.",
     icon: PartyPopper,
   },
   {
     title: "Corporate & branded gifts",
-    description: "Logo-ready pieces and consistent quality for teams, launches, and client appreciation.",
+    description: "Logo-ready pieces for teams, launches, and client appreciation.",
     icon: Gift,
   },
 ];
 
 export function SouvenirsEvents() {
   return (
-    <section id="souvenirs" className="mx-auto max-w-6xl px-5 py-14 md:py-20">
-      <LazyMotion features={domAnimation}>
-        <m.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="max-w-2xl space-y-3"
-        >
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/60">
-            Souvenirs for events
+    <section id="souvenirs" className="border-b border-white/[0.06]">
+      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+        <div className="max-w-xl space-y-4">
+          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/45">Event souvenirs</p>
+          <h2 className="text-3xl font-light tracking-tight text-white md:text-4xl">Orders for celebrations.</h2>
+          <p className="text-[15px] leading-relaxed text-white/60 md:text-base">
+            Share your date, quantity, and direction—we’ll propose options and timelines before production.
           </p>
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
-            Order souvenirs that feel personal
-          </h2>
-          <p className="text-sm leading-relaxed text-white/75 md:text-base">
-            Weddings, birthdays, and celebrations — share your date, quantity, and style direction. We’ll propose options,
-            show sample layouts, and align on production time.
-          </p>
-        </m.div>
-      </LazyMotion>
+        </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
-        {EVENTS.map((item) => (
-          <Glow
-            key={item.title}
-            className="flex flex-col rounded-[28px] border border-white/10 bg-white/5 p-6"
-          >
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-              <item.icon className="h-6 w-6 text-brand-aquaHaze" aria-hidden />
-            </div>
-            <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-            <p className="mt-2 flex-1 text-sm leading-relaxed text-white/70">{item.description}</p>
-            <div className="mt-6 aspect-[4/3] w-full rounded-2xl border border-dashed border-white/20 bg-white/[0.04]">
-              <div className="flex h-full items-center justify-center p-4 text-center text-xs text-white/50">
-                Add event souvenir photos to <span className="mx-1 font-mono text-white/70">public/images/</span>
+        <div className="mt-14 grid gap-3 md:grid-cols-3">
+          {EVENTS.map((item) => (
+            <Surface key={item.title} className="flex flex-col p-6 md:p-7">
+              <item.icon className="h-5 w-5 text-white/35" strokeWidth={1.25} aria-hidden />
+              <h3 className="mt-5 text-base font-medium text-white/95">{item.title}</h3>
+              <p className="mt-2 flex-1 text-sm leading-relaxed text-white/55">{item.description}</p>
+              <div className="mt-8 aspect-[4/3] rounded-md border border-dashed border-white/[0.12] bg-white/[0.02]">
+                <div className="flex h-full items-center justify-center p-4 text-center text-[11px] text-white/35">
+                  Photo placeholder
+                </div>
               </div>
-            </div>
-          </Glow>
-        ))}
-      </div>
+            </Surface>
+          ))}
+        </div>
 
-      <div className="mt-10 flex flex-wrap gap-3">
-        <a href="/#contact">
-          <Button variant="primary">Request a souvenir quote</Button>
-        </a>
-        <Link href="/shop">
-          <Button variant="secondary">Preview product layout</Button>
-        </Link>
+        <div className="mt-12 flex flex-wrap gap-3">
+          <a href="/#contact">
+            <Button variant="primary">Request a quote</Button>
+          </a>
+          <Link href="/shop">
+            <Button variant="secondary">Shop preview</Button>
+          </Link>
+        </div>
       </div>
     </section>
   );

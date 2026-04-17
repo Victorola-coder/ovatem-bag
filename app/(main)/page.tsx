@@ -20,13 +20,9 @@ export default function HomePage() {
       <Founder />
       <SouvenirsEvents />
       <Collections />
-      <div id="craft">
-        <Craft />
-      </div>
+      <Craft />
       <TrainedBy />
-      <div id="testimonials">
-        <Testimonials />
-      </div>
+      <Testimonials />
       <Contact />
     </>
   );

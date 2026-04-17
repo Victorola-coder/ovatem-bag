@@ -4,7 +4,7 @@ import { toast } from "sonner";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button, Input, Otp } from "@/app/components/ui";
-import { Animation, Glow } from "@/app/components/global";
+import { Surface } from "@/app/components/ui";
 import { signupSchema, type SignupFormData } from "@/app/lib/validations/auth";
 
 export default function SignUp() {
@@ -43,12 +43,9 @@ export default function SignUp() {
   };
 
   return (
-    <Animation>
-      <div className="min-h-screen flex items-center justify-center p-4">
-        <Glow className="max-w-md w-full p-6">
-          <h1 className="text-2xl font-geistSans font-bold mb-6">
-            Create your account
-          </h1>
+    <div className="flex min-h-screen items-center justify-center bg-background p-4">
+      <Surface className="w-full max-w-md p-6">
+          <h1 className="mb-6 text-2xl font-bold text-white">Create your account</h1>
 
           {!showOtp ? (
             <form onSubmit={handleSubmit} className="space-y-4">
@@ -110,8 +107,7 @@ export default function SignUp() {
               <Otp />
             </div>
           )}
-        </Glow>
-      </div>
-    </Animation>
+      </Surface>
+    </div>
   );
 }

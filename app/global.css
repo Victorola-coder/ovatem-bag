@@ -16,6 +16,9 @@ body {
   color: white;
   background-color: var(--eden);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 body::-webkit-scrollbar {

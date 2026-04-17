@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 import { Heart } from "lucide-react";
-import { Glow } from "@/app/components/global";
-import { Button } from "@/app/components/ui";
+import { Button, Surface } from "@/app/components/ui";
 import { useWishlist } from "@/app/hooks/use-wishlist";
 import type { ShopProduct } from "@/app/lib/shop-products";
 
@@ -17,14 +16,14 @@ export function ProductDetail({ product }: { product: ShopProduct }) {
       </Link>
 
       <div className="mt-8 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-        <Glow className="overflow-hidden rounded-[32px] border border-white/10 bg-white/5">
-          <div className="relative aspect-square bg-gradient-to-br from-white/15 to-transparent">
+        <Surface className="overflow-hidden p-0">
+          <div className="relative aspect-square bg-white/[0.03]">
             <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-white/45">
               Product gallery placeholder — add images to{" "}
               <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5">public/images/products/{product.slug}</code>
             </div>
           </div>
-        </Glow>
+        </Surface>
 
         <div className="space-y-6">
           <div>

@@ -1,18 +1,13 @@
-"use client";
-
 import { TRUST_STATS } from "@/app/content/brand";
 
 export function StatsStrip() {
   return (
-    <section
-      aria-label="Ovatem impact and experience"
-      className="border-y border-white/10 bg-white/[0.03]"
-    >
-      <div className="mx-auto grid max-w-6xl gap-8 px-5 py-10 md:grid-cols-3 md:py-12">
+    <section aria-label="Ovatem impact and experience" className="border-b border-black/[0.06] bg-[#eff6f5]">
+      <div className="mx-auto grid max-w-5xl gap-12 px-6 py-14 md:grid-cols-3 md:gap-10 md:py-16">
         {TRUST_STATS.map((s) => (
-          <div key={s.label} className="text-center md:text-left">
-            <p className="text-3xl font-semibold text-white md:text-4xl">{s.value}</p>
-            <p className="mt-2 text-sm text-white/70">{s.label}</p>
+          <div key={s.label}>
+            <p className="text-3xl font-light tabular-nums tracking-tight text-[#0c4c3c] md:text-4xl">{s.value}</p>
+            <p className="mt-2 text-sm text-[#0c4c3c]/60">{s.label}</p>
           </div>
         ))}
       </div>

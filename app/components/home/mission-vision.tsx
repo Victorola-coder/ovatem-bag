@@ -1,49 +1,26 @@
-"use client";
-
-import { m, LazyMotion, domAnimation } from "framer-motion";
-import { Glow } from "@/app/components/global";
+import { Surface } from "@/app/components/ui";
 import { BRAND_MISSION, BRAND_VISION, BRAND_VOICE } from "@/app/content/brand";
 
 export function MissionVision() {
   return (
-    <section id="mission" className="mx-auto max-w-6xl px-5 py-14 md:py-20">
-      <LazyMotion features={domAnimation}>
-        <m.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5 }}
-          className="max-w-2xl space-y-3"
-        >
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/60">
-            Mission &amp; vision
-          </p>
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
-            Built on purpose, made to last
-          </h2>
-          <p className="text-sm leading-relaxed text-white/75 md:text-base">
-            {BRAND_VOICE.summary}
-          </p>
-        </m.div>
-      </LazyMotion>
+    <section id="mission" className="border-b border-white/[0.06]">
+      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+        <div className="max-w-xl">
+          <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/45">Mission &amp; vision</p>
+          <h2 className="mt-5 text-3xl font-light tracking-tight text-white md:text-4xl">Clarity in every stitch.</h2>
+          <p className="mt-6 text-[15px] leading-relaxed text-white/60 md:text-base">{BRAND_VOICE.summary}</p>
+        </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2">
-        <Glow className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-primary-100">
-            Mission
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-white md:text-xl">
-            {BRAND_MISSION}
-          </p>
-        </Glow>
-        <Glow className="rounded-[32px] border border-white/10 bg-white/5 p-8">
-          <p className="text-xs font-semibold uppercase tracking-wider text-primary-100">
-            Vision
-          </p>
-          <p className="mt-4 text-lg leading-relaxed text-white md:text-xl">
-            {BRAND_VISION}
-          </p>
-        </Glow>
+        <div className="mt-14 grid gap-4 md:grid-cols-2">
+          <Surface className="p-8 md:p-10">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Mission</p>
+            <p className="mt-4 text-lg font-light leading-relaxed text-white/95 md:text-xl">{BRAND_MISSION}</p>
+          </Surface>
+          <Surface className="p-8 md:p-10">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Vision</p>
+            <p className="mt-4 text-lg font-light leading-relaxed text-white/95 md:text-xl">{BRAND_VISION}</p>
+          </Surface>
+        </div>
       </div>
     </section>
   );

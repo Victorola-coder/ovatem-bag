@@ -5,83 +5,77 @@ import { Image } from "@/app/components/ui";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-white/10">
-      <div className="mx-auto max-w-6xl px-5 py-12">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="border-t border-white/[0.06]">
+      <div className="mx-auto max-w-5xl px-6 py-14">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="/images/logo.svg"
-                alt="Ovatem logo"
-                width={34}
-                height={34}
-                className="rounded-xl bg-white/10 p-2"
-              />
+            <Link href="/" className="inline-flex items-center gap-3">
+              <Image src="/images/logo.svg" alt="Ovatem logo" width={32} height={32} className="rounded-md opacity-95" />
               <div className="leading-tight">
-                <p className="text-sm font-semibold text-white">Ovatem</p>
-                <p className="text-xs text-white/70">Quality Bag</p>
+                <p className="text-[13px] font-medium text-white/95">Ovatem</p>
+                <p className="text-[11px] text-white/45">Quality Bag</p>
               </div>
             </Link>
-            <p className="text-sm text-white/70">
+            <p className="max-w-xs text-[13px] leading-relaxed text-white/50">
               Crafting Excellence. Every Style. Every Story.
             </p>
           </div>
 
-          <div className="grid gap-2 text-sm text-white/70">
-            <p className="text-sm font-semibold text-white">Explore</p>
-            <Link className="hover:text-white" href="/#collections">
+          <div className="grid gap-2 text-[13px] text-white/50">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Explore</p>
+            <Link className="hover:text-white/80" href="/#collections">
               Collections
             </Link>
-            <Link className="hover:text-white" href="/#souvenirs">
+            <Link className="hover:text-white/80" href="/#souvenirs">
               Event souvenirs
             </Link>
-            <Link className="hover:text-white" href="/shop">
+            <Link className="hover:text-white/80" href="/shop">
               Shop preview
             </Link>
-            <Link className="hover:text-white" href="/blog">
+            <Link className="hover:text-white/80" href="/blog">
               Journal
             </Link>
-            <Link className="hover:text-white" href="/brand">
+            <Link className="hover:text-white/80" href="/brand">
               Brand reference
             </Link>
-            <Link className="hover:text-white" href="/#contact">
+            <Link className="hover:text-white/80" href="/#contact">
               Contact
             </Link>
           </div>
 
-          <div className="grid gap-2 text-sm text-white/70">
-            <p className="text-sm font-semibold text-white">Legal</p>
-            <Link className="hover:text-white" href="/privacy">
+          <div className="grid gap-2 text-[13px] text-white/50">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Legal</p>
+            <Link className="hover:text-white/80" href="/privacy">
               Privacy
             </Link>
-            <Link className="hover:text-white" href="/terms">
+            <Link className="hover:text-white/80" href="/terms">
               Terms
             </Link>
-            <Link className="hover:text-white" href="/returns">
+            <Link className="hover:text-white/80" href="/returns">
               Returns &amp; refunds
             </Link>
-            <Link className="hover:text-white" href="/training-policy">
+            <Link className="hover:text-white/80" href="/training-policy">
               Training policy
             </Link>
           </div>
 
-          <div className="grid gap-2 text-sm text-white/70">
-            <p className="text-sm font-semibold text-white">Contact</p>
-            <p>WhatsApp: (add number)</p>
-            <p>Email: (add email)</p>
-            <p>Location: Nigeria</p>
+          <div className="text-[13px] text-white/50">
+            <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Contact</p>
+            <p className="mt-3">WhatsApp: (add number)</p>
+            <p className="mt-1">Email: (add email)</p>
+            <p className="mt-1">Nigeria</p>
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col gap-2 border-t border-white/10 pt-6 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
+        <div className="mt-12 flex flex-col gap-2 border-t border-white/[0.06] pt-8 text-[11px] text-white/35 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Ovatem. All rights reserved.</p>
-          <p className="flex flex-wrap items-center gap-1">
+          <p>
             Built by{" "}
             <a
               href="https://victorola.dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white hover:underline"
+              className="text-white/55 hover:text-white/80"
             >
               VickyJay
             </a>
@@ -91,4 +85,3 @@ export function SiteFooter() {
     </footer>
   );
 }
-

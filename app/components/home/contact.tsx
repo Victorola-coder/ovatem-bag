@@ -1,78 +1,61 @@
 "use client";
 
-import { Glow } from "@/app/components/global";
-import { Button, Input } from "@/app/components/ui";
+import { Button, Input, Surface } from "@/app/components/ui";
 
 export function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-5 py-14 md:py-20">
-      <div className="grid gap-10 md:grid-cols-2 md:items-start">
-        <div className="space-y-4">
-          <h2 className="text-3xl font-semibold text-white md:text-4xl">
-            Let’s create something memorable
-          </h2>
-          <p className="text-sm leading-relaxed text-white/75 md:text-base">
-            Share what you need—bag type, quantity (if souvenirs), and your ideal
-            deadline. We’ll respond with options and pricing.
-          </p>
+    <section id="contact" className="border-b border-white/[0.06]">
+      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
+        <div className="grid gap-14 md:grid-cols-2 md:items-start">
+          <div className="space-y-5">
+            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/45">Contact</p>
+            <h2 className="text-3xl font-light tracking-tight text-white md:text-4xl">Tell us what you need.</h2>
+            <p className="text-[15px] leading-relaxed text-white/60 md:text-base">
+              Bag type, souvenir quantity, event date, or training interest—we’ll reply with next steps.
+            </p>
 
-          <div className="grid gap-3">
-            <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-              <p className="text-sm font-semibold text-white">Newsletter (coming soon)</p>
-              <p className="mt-2 text-sm text-white/75">
-                Leave your email in the form when we wire it — drops on new collections, classes, and souvenir slots.
-              </p>
-            </div>
-            <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-              <p className="text-sm font-semibold text-white">Delivery</p>
-              <p className="mt-2 text-sm text-white/75">
-                Timelines depend on complexity and volume—custom orders are
-                confirmed after consultation.
-              </p>
+            <div className="grid gap-3 pt-2">
+              <Surface className="p-5">
+                <p className="text-xs font-medium uppercase tracking-wider text-white/40">Newsletter</p>
+                <p className="mt-2 text-sm text-white/55">Coming soon — leave your email in the form when connected.</p>
+              </Surface>
+              <Surface className="p-5">
+                <p className="text-xs font-medium uppercase tracking-wider text-white/40">Lead times</p>
+                <p className="mt-2 text-sm text-white/55">Custom work is confirmed after consultation; timelines vary by scope.</p>
+              </Surface>
             </div>
           </div>
-        </div>
 
-        <Glow className="rounded-[36px] border border-white/10 bg-white/5 p-6">
-          <form
-            onSubmit={(e) => e.preventDefault()}
-            className="grid gap-4"
-            aria-label="Contact form"
-          >
-            <div className="grid gap-4 md:grid-cols-2">
-              <Input name="firstName" placeholder="First name" />
-              <Input name="lastName" placeholder="Last name" />
-            </div>
-            <Input name="phone" placeholder="Phone / WhatsApp number" />
-            <Input
-              name="subject"
-              placeholder="What do you need? (e.g. Handbag, wedding souvenirs, training)"
-            />
-            <textarea
-              name="message"
-              placeholder="Tell us your preferred style, quantity, colors, and timeline..."
-              className="w-full min-h-[140px] rounded-[24px] p-4 bg-background-soft text-brand-eden placeholder:text-brand-viridianGreen font-aloe text-[16px] resize-none focus:outline-none focus:ring-0"
-            />
+          <Surface className="p-6 md:p-8">
+            <form onSubmit={(e) => e.preventDefault()} className="grid gap-4" aria-label="Contact form">
+              <div className="grid gap-4 md:grid-cols-2">
+                <Input name="firstName" placeholder="First name" />
+                <Input name="lastName" placeholder="Last name" />
+              </div>
+              <Input name="phone" placeholder="Phone / WhatsApp" />
+              <Input name="subject" placeholder="Handbag, souvenirs, training…" />
+              <textarea
+                name="message"
+                placeholder="Style, quantity, colors, deadline…"
+                className="min-h-[132px] w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 text-[15px] text-white placeholder:text-white/35 focus:border-white/20 focus:outline-none"
+              />
 
-            <div className="flex flex-wrap gap-3 pt-1">
-              <Button variant="primary" type="submit">
-                Send request
-              </Button>
-              <a href="#" className="inline-flex">
-                <Button variant="secondary" type="button">
-                  WhatsApp
+              <div className="flex flex-wrap gap-3 pt-1">
+                <Button variant="primary" type="submit">
+                  Send
                 </Button>
-              </a>
-            </div>
+                <a href="https://wa.me/" className="inline-flex" target="_blank" rel="noopener noreferrer">
+                  <Button variant="secondary" type="button">
+                    WhatsApp
+                  </Button>
+                </a>
+              </div>
 
-            <p className="text-xs text-white/60">
-              This form is a UI stub for now. We’ll wire it to email/WhatsApp when
-              you provide the preferred contact route.
-            </p>
-          </form>
-        </Glow>
+              <p className="text-xs text-white/40">Form is a placeholder until backend or WhatsApp deep link is set.</p>
+            </form>
+          </Surface>
+        </div>
       </div>
     </section>
   );
 }
-

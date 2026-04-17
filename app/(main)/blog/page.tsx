@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Glow } from "@/app/components/global";
+import { Surface } from "@/app/components/ui";
 import { BLOG_TOPIC_IDEAS } from "@/app/content/brand";
 
 export const metadata: Metadata = {
@@ -23,10 +23,10 @@ export default function BlogPage() {
 
       <div className="mt-10 grid gap-4 md:grid-cols-2">
         {BLOG_TOPIC_IDEAS.map((title) => (
-          <Glow key={title} className="rounded-[24px] border border-white/10 bg-white/5 p-6">
-            <p className="text-sm font-semibold text-white">{title}</p>
-            <p className="mt-2 text-xs text-white/55">Draft — assign a slug and publish when written.</p>
-          </Glow>
+          <Surface key={title} className="p-6">
+            <p className="text-sm font-medium text-white/90">{title}</p>
+            <p className="mt-2 text-xs text-white/45">Draft — assign a slug and publish when written.</p>
+          </Surface>
         ))}
       </div>
 

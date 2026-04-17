@@ -5,6 +5,7 @@ export { default as Card } from "./card";
 export { default as Input } from "./input";
 export { default as Modal } from "./modal";
 export { default as Image } from "./image";
+export { Surface } from "./surface";
 export { default as Toggle } from "./toggle";
 export { default as Button } from "./button";
 export { default as Select } from "./select";

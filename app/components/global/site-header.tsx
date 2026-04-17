@@ -18,42 +18,30 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-background/70 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-background/90 backdrop-blur-md">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image
-            src="/images/logo.svg"
-            alt="Ovatem logo"
-            width={34}
-            height={34}
-            className="rounded-xl bg-white/10 p-2"
-          />
+          <Image src="/images/logo.svg" alt="Ovatem logo" width={32} height={32} className="rounded-md opacity-95" />
           <div className="leading-tight">
-            <p className="text-sm font-semibold text-white">Ovatem</p>
-            <p className="text-xs text-white/70">Quality Bag</p>
+            <p className="text-[13px] font-medium tracking-wide text-white/95">Ovatem</p>
+            <p className="text-[11px] text-white/45">Quality Bag</p>
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-5 lg:gap-6 md:flex">
+        <nav className="hidden items-center gap-6 md:flex lg:gap-8">
           {NAV.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-sm text-white/75 hover:text-white transition-colors"
+              className="text-[13px] text-white/55 transition-colors hover:text-white"
             >
               {item.label}
             </a>
           ))}
-          <Link
-            href="/shop"
-            className="text-sm text-white/75 hover:text-white transition-colors"
-          >
+          <Link href="/shop" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Shop
           </Link>
-          <Link
-            href="/blog"
-            className="text-sm text-white/75 hover:text-white transition-colors"
-          >
+          <Link href="/blog" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Journal
           </Link>
           <a href="/#contact">
@@ -65,7 +53,7 @@ export function SiteHeader() {
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-sm text-white md:hidden"
+          className="inline-flex items-center justify-center rounded-md border border-white/[0.08] px-3 py-2 text-[13px] text-white/80 md:hidden"
           onClick={() => setIsOpen((v) => !v)}
           aria-expanded={isOpen}
           aria-label="Toggle menu"
@@ -74,44 +62,41 @@ export function SiteHeader() {
         </button>
       </div>
 
-      <div className={clsx("md:hidden", isOpen ? "block" : "hidden")}>
-        <div className="mx-auto max-w-6xl px-5 pb-4">
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <div className="grid gap-3">
-              {NAV.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-sm text-white/80 hover:text-white transition-colors"
-                >
-                  {item.label}
-                </a>
-              ))}
-              <Link
-                href="/shop"
+      <div className={clsx("md:hidden", isOpen ? "block border-t border-white/[0.06]" : "hidden")}>
+        <div className="mx-auto max-w-5xl px-6 pb-4">
+          <div className="grid gap-1 pt-2">
+            {NAV.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
                 onClick={() => setIsOpen(false)}
-                className="text-sm text-white/80 hover:text-white transition-colors"
+                className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
               >
-                Shop
-              </Link>
-              <Link
-                href="/blog"
-                onClick={() => setIsOpen(false)}
-                className="text-sm text-white/80 hover:text-white transition-colors"
-              >
-                Journal
-              </Link>
-              <a href="/#contact" onClick={() => setIsOpen(false)}>
-                <Button variant="primary" className="w-full">
-                  Make an Order
-                </Button>
+                {item.label}
               </a>
-            </div>
+            ))}
+            <Link
+              href="/shop"
+              onClick={() => setIsOpen(false)}
+              className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
+            >
+              Shop
+            </Link>
+            <Link
+              href="/blog"
+              onClick={() => setIsOpen(false)}
+              className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
+            >
+              Journal
+            </Link>
+            <a href="/#contact" onClick={() => setIsOpen(false)} className="pt-2">
+              <Button variant="primary" className="w-full">
+                Make an order
+              </Button>
+            </a>
           </div>
         </div>
       </div>
     </header>
   );
 }
-
