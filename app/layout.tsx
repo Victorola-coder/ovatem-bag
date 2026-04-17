@@ -1,7 +1,7 @@
 import "./global.css";
 import { Toaster } from "sonner";
 import localFont from "next/font/local";
-import { AOS } from "./components/global";
+import { AOS, FloatingWhatsApp } from "./components/global";
 import { Montserrat } from "next/font/google";
 import type { Metadata, Viewport } from "next";
 
@@ -93,6 +93,7 @@ export default function RootLayout({
         <Toaster richColors />
         <AOS />
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

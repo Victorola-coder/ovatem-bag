@@ -6,10 +6,12 @@ import { clsx } from "clsx";
 import { Button, Image } from "@/app/components/ui";
 
 const NAV = [
-  { label: "Collections", href: "#collections" },
-  { label: "Craft", href: "#craft" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "Contact", href: "#contact" },
+  { label: "Mission", href: "/#mission" },
+  { label: "Souvenirs", href: "/#souvenirs" },
+  { label: "Collections", href: "/#collections" },
+  { label: "Training", href: "/#trained" },
+  { label: "Reviews", href: "/#testimonials" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export function SiteHeader() {
@@ -32,7 +34,7 @@ export function SiteHeader() {
           </div>
         </Link>
 
-        <nav className="hidden items-center gap-6 md:flex">
+        <nav className="hidden items-center gap-5 lg:gap-6 md:flex">
           {NAV.map((item) => (
             <a
               key={item.href}
@@ -42,7 +44,19 @@ export function SiteHeader() {
               {item.label}
             </a>
           ))}
-          <a href="#contact">
+          <Link
+            href="/shop"
+            className="text-sm text-white/75 hover:text-white transition-colors"
+          >
+            Shop
+          </Link>
+          <Link
+            href="/blog"
+            className="text-sm text-white/75 hover:text-white transition-colors"
+          >
+            Journal
+          </Link>
+          <a href="/#contact">
             <Button size="sm" variant="primary">
               Order
             </Button>
@@ -74,7 +88,21 @@ export function SiteHeader() {
                   {item.label}
                 </a>
               ))}
-              <a href="#contact" onClick={() => setIsOpen(false)}>
+              <Link
+                href="/shop"
+                onClick={() => setIsOpen(false)}
+                className="text-sm text-white/80 hover:text-white transition-colors"
+              >
+                Shop
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setIsOpen(false)}
+                className="text-sm text-white/80 hover:text-white transition-colors"
+              >
+                Journal
+              </Link>
+              <a href="/#contact" onClick={() => setIsOpen(false)}>
                 <Button variant="primary" className="w-full">
                   Make an Order
                 </Button>

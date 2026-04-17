@@ -39,16 +39,12 @@ export function Hero() {
               </p>
 
               <div className="flex flex-wrap gap-3">
-                <Link href="#collections">
+                <Link href="/#collections">
                   <Button variant="primary">Explore Collections</Button>
                 </Link>
-                <a
-                  href="#contact"
-                  className="inline-flex"
-                  aria-label="Contact Ovatem"
-                >
+                <Link href="/#contact" className="inline-flex" aria-label="Contact Ovatem">
                   <Button variant="secondary">Make an Order</Button>
-                </a>
+                </Link>
               </div>
 
               <div className="grid max-w-xl grid-cols-3 gap-3 pt-2 text-white/80">
@@ -127,7 +123,10 @@ export function Hero() {
                   <p className="text-sm font-medium text-white">
                     Ready to create something special?
                   </p>
-                  <Link href="#contact" className="text-sm text-white/80 underline underline-offset-4 hover:text-white">
+                  <Link
+                    href="/#contact"
+                    className="text-sm text-white/80 underline underline-offset-4 hover:text-white"
+                  >
                     Contact
                   </Link>
                 </div>

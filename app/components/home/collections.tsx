@@ -46,7 +46,7 @@ export function Collections() {
           </p>
         </div>
 
-        <a href="#contact">
+        <a href="/#contact">
           <Button variant="default">Request a Quote</Button>
         </a>
       </div>

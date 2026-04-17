@@ -19,13 +19,25 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "Our event souvenirs were neat, thoughtful, and delivered on time. The presentation was top-tier.",
     name: "Client",
-    context: "Souvenir branding",
+    context: "Wedding souvenirs",
   },
   {
     quote:
       "Great communication, excellent quality, and the final piece matched exactly what I imagined.",
     name: "Customer",
     context: "Custom order",
+  },
+  {
+    quote:
+      "I finally understood cutting and assembly the way it should be done — patient teaching and honest feedback.",
+    name: "Student",
+    context: "Bag-making training",
+  },
+  {
+    quote:
+      "Birthday favors for my guests looked expensive but were planned within my budget. Everyone asked where they were from.",
+    name: "Client",
+    context: "Birthday event souvenirs",
   },
 ];
 
@@ -34,15 +46,15 @@ export function Testimonials() {
     <section className="mx-auto max-w-6xl px-5 py-14 md:py-20">
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl font-semibold text-white md:text-4xl">
-          Trusted by customers
+          Reviews &amp; stories
         </h2>
         <p className="max-w-2xl text-sm text-white/75 md:text-base">
-          A premium brand is built on consistency—quality, delivery, and the way
-          people feel when they unbox.
+          Customers, event clients, and students — consistency in quality, teaching, and the way people feel when they
+          unbox or graduate.
         </p>
       </div>
 
-      <div className="mt-10 grid gap-6 md:grid-cols-3">
+      <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {TESTIMONIALS.map((t) => (
           <Glow
             key={t.quote}
