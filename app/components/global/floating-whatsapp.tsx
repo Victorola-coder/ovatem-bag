@@ -1,17 +1,14 @@
 "use client";
 
+import Link from "next/link";
 import { MessageCircle } from "lucide-react";
-
-const waUrl = process.env.NEXT_PUBLIC_WHATSAPP_URL;
+import { getWhatsAppUrl } from "@/app/constants/site";
 
 export function FloatingWhatsApp() {
-  const href =
-    waUrl && waUrl.length > 0
-      ? waUrl
-      : "https://wa.me/?text=Hi%20Ovatem%20%E2%80%94%20I%E2%80%99d%20like%20to%20ask%20about%20bags%20or%20souvenirs.";
+  const href = getWhatsAppUrl();
 
   return (
-    <a
+    <Link
       href={href}
       target="_blank"
       rel="noopener noreferrer"
@@ -19,6 +16,6 @@ export function FloatingWhatsApp() {
       aria-label="Chat on WhatsApp"
     >
       <MessageCircle className="h-7 w-7" aria-hidden />
-    </a>
+    </Link>
   );
 }

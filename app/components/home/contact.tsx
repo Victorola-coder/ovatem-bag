@@ -1,12 +1,13 @@
 "use client";
 
 import { Button, CtaLink, Input, Surface } from "@/app/components/ui";
+import { getWhatsAppUrl } from "@/app/constants/site";
 
 export function Contact() {
   return (
     <section id="contact" className="border-b border-white/[0.06]">
-      <div className="mx-auto max-w-5xl px-6 py-20 md:py-28">
-        <div className="grid gap-14 md:grid-cols-2 md:items-start">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-10 md:py-28 lg:px-12">
+        <div className="grid gap-14 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)] lg:items-start lg:gap-16">
           <div className="space-y-5">
             <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-white/45">Contact</p>
             <h2 className="text-3xl font-light tracking-tight text-white md:text-4xl">Tell us what you need.</h2>
@@ -45,7 +46,7 @@ export function Contact() {
                   Send message
                 </Button>
                 <CtaLink
-                  href="https://wa.me/"
+                  href={getWhatsAppUrl()}
                   variant="secondary"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -54,7 +55,7 @@ export function Contact() {
                 </CtaLink>
               </div>
 
-              <p className="text-xs text-white/40">Form is a placeholder until backend or WhatsApp deep link is set.</p>
+              <p className="text-xs text-white/40">Form is a placeholder until email/backend is connected.</p>
             </form>
           </Surface>
         </div>

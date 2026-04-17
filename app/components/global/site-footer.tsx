@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Image } from "@/app/components/ui";
+import { getWhatsAppUrl, WHATSAPP_DISPLAY } from "@/app/constants/site";
 
 export function SiteFooter() {
   return (
@@ -67,7 +68,17 @@ export function SiteFooter() {
 
           <div className="text-[13px] text-white/50">
             <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Contact</p>
-            <p className="mt-3">WhatsApp: (add number)</p>
+            <p className="mt-3">
+              WhatsApp:{" "}
+              <Link
+                href={getWhatsAppUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/65 hover:text-white/90"
+              >
+                {WHATSAPP_DISPLAY}
+              </Link>
+            </p>
             <p className="mt-1">Email: (add email)</p>
             <p className="mt-1">Nigeria</p>
           </div>
@@ -77,14 +88,14 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Ovatem. All rights reserved.</p>
           <p>
             Built by{" "}
-            <a
+            <Link
               href="https://victorola.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white/55 hover:text-white/80"
             >
               VickyJay
-            </a>
+            </Link>
           </p>
         </div>
       </div>

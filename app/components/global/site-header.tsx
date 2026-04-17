@@ -36,13 +36,13 @@ export function SiteHeader() {
 
         <nav className="hidden items-center gap-6 md:flex lg:gap-8">
           {NAV.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               className="text-[13px] text-white/55 transition-colors hover:text-white"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
           <Link href="/shop" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Shop
@@ -70,14 +70,14 @@ export function SiteHeader() {
         <div className="mx-auto max-w-5xl px-6 pb-4">
           <div className="grid gap-1 pt-2">
             {NAV.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <Link
               href="/shop"
