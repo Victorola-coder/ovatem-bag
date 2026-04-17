@@ -18,10 +18,9 @@ export function Contact() {
 
           <div className="grid gap-3">
             <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
-              <p className="text-sm font-semibold text-white">Vision</p>
+              <p className="text-sm font-semibold text-white">Newsletter (coming soon)</p>
               <p className="mt-2 text-sm text-white/75">
-                To become a leading African heritage-inspired bag brand
-                recognized globally.
+                Leave your email in the form when we wire it — drops on new collections, classes, and souvenir slots.
               </p>
             </div>
             <div className="rounded-[28px] border border-white/10 bg-white/5 p-5">
@@ -45,7 +44,10 @@ export function Contact() {
               <Input name="lastName" placeholder="Last name" />
             </div>
             <Input name="phone" placeholder="Phone / WhatsApp number" />
-            <Input name="subject" placeholder="What do you need? (e.g. Handbag, Souvenir)" />
+            <Input
+              name="subject"
+              placeholder="What do you need? (e.g. Handbag, wedding souvenirs, training)"
+            />
             <textarea
               name="message"
               placeholder="Tell us your preferred style, quantity, colors, and timeline..."

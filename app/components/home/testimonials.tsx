@@ -55,9 +55,9 @@ export function Testimonials() {
       </div>
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {TESTIMONIALS.map((t) => (
+        {TESTIMONIALS.map((t, i) => (
           <Glow
-            key={t.quote}
+            key={`${t.name}-${i}`}
             className="rounded-[32px] border border-white/10 bg-white/5 p-6"
           >
             <p className="text-sm leading-relaxed text-white/80">“{t.quote}”</p>

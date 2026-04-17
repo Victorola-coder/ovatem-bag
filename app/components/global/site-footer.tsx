@@ -7,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/10">
       <div className="mx-auto max-w-6xl px-5 py-12">
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
@@ -28,13 +28,41 @@ export function SiteFooter() {
           </div>
 
           <div className="grid gap-2 text-sm text-white/70">
-            <p className="text-sm font-semibold text-white">Quick links</p>
-            <a className="hover:text-white" href="#collections">
+            <p className="text-sm font-semibold text-white">Explore</p>
+            <Link className="hover:text-white" href="/#collections">
               Collections
-            </a>
-            <a className="hover:text-white" href="#contact">
+            </Link>
+            <Link className="hover:text-white" href="/#souvenirs">
+              Event souvenirs
+            </Link>
+            <Link className="hover:text-white" href="/shop">
+              Shop preview
+            </Link>
+            <Link className="hover:text-white" href="/blog">
+              Journal
+            </Link>
+            <Link className="hover:text-white" href="/brand">
+              Brand reference
+            </Link>
+            <Link className="hover:text-white" href="/#contact">
               Contact
-            </a>
+            </Link>
+          </div>
+
+          <div className="grid gap-2 text-sm text-white/70">
+            <p className="text-sm font-semibold text-white">Legal</p>
+            <Link className="hover:text-white" href="/privacy">
+              Privacy
+            </Link>
+            <Link className="hover:text-white" href="/terms">
+              Terms
+            </Link>
+            <Link className="hover:text-white" href="/returns">
+              Returns &amp; refunds
+            </Link>
+            <Link className="hover:text-white" href="/training-policy">
+              Training policy
+            </Link>
           </div>
 
           <div className="grid gap-2 text-sm text-white/70">
