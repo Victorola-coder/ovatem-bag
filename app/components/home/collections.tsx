@@ -1,4 +1,4 @@
-import { Button, Surface } from "@/app/components/ui";
+import { CtaLink, Surface } from "@/app/components/ui";
 
 type CollectionCard = {
   title: string;
@@ -42,9 +42,9 @@ export function Collections() {
             </p>
           </div>
 
-          <a href="/#contact">
-            <Button variant="default">Request a quote</Button>
-          </a>
+          <CtaLink href="/#contact" variant="primary">
+            Request a quote
+          </CtaLink>
         </div>
 
         <div className="mt-14 grid gap-3 sm:grid-cols-2">

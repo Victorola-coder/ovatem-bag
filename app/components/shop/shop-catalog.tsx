@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { Heart } from "lucide-react";
-import { Button, Surface } from "@/app/components/ui";
+import { CtaLink, Surface } from "@/app/components/ui";
 import { useWishlist } from "@/app/hooks/use-wishlist";
 import type { ShopProduct } from "@/app/lib/shop-products";
 
@@ -59,17 +58,13 @@ export function ShopCatalog({ products }: { products: ShopProduct[] }) {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Link href={`/shop/${p.slug}`}>
-                  <Button variant="primary" size="sm">
-                    View details
-                  </Button>
-                </Link>
-                <Link href="/#contact">
-                  <Button variant="secondary" size="sm">
-                    Enquire
-                  </Button>
-                </Link>
+              <div className="mt-6 flex flex-wrap items-center gap-3">
+                <CtaLink href={`/shop/${p.slug}`} variant="primary" size="sm">
+                  View details
+                </CtaLink>
+                <CtaLink href="/#contact" variant="secondary" size="sm">
+                  Enquire
+                </CtaLink>
               </div>
             </div>
           </Surface>

@@ -1,6 +1,5 @@
-import Link from "next/link";
 import NextImage from "next/image";
-import { Button, Image } from "@/app/components/ui";
+import { CtaLink, Image } from "@/app/components/ui";
 
 const PILLARS = [
   { label: "Premium finishing", detail: "Materials & construction" },
@@ -25,17 +24,13 @@ export function Hero() {
               touch.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              <Link href="/#collections">
-                <Button variant="primary">View collections</Button>
-              </Link>
-              <Link
-                href="/#contact"
-                className="inline-flex items-center justify-center rounded-lg border border-white/15 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/[0.04]"
-                aria-label="Contact Ovatem"
-              >
+            <div className="mt-10 flex flex-wrap items-center gap-3">
+              <CtaLink href="/#collections" variant="primary">
+                View collections
+              </CtaLink>
+              <CtaLink href="/#contact" variant="secondary" aria-label="Contact Ovatem">
                 Enquire
-              </Link>
+              </CtaLink>
             </div>
 
             <dl className="mt-16 grid gap-6 border-t border-white/[0.06] pt-10 sm:grid-cols-3">

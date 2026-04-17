@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { clsx } from "clsx";
-import { Button, Image } from "@/app/components/ui";
+import { CtaLink, Image } from "@/app/components/ui";
 
 const NAV = [
   { label: "Mission", href: "/#mission" },
@@ -50,11 +50,9 @@ export function SiteHeader() {
           <Link href="/blog" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Journal
           </Link>
-          <a href="/#contact">
-            <Button size="sm" variant="primary">
-              Order
-            </Button>
-          </a>
+          <CtaLink href="/#contact" size="sm" variant="primary">
+            Order
+          </CtaLink>
         </nav>
 
         <button
@@ -95,11 +93,14 @@ export function SiteHeader() {
             >
               Journal
             </Link>
-            <a href="/#contact" onClick={() => setIsOpen(false)} className="pt-2">
-              <Button variant="primary" className="w-full">
+              <CtaLink
+                href="/#contact"
+                variant="primary"
+                className="mt-2 w-full justify-center"
+                onClick={() => setIsOpen(false)}
+              >
                 Make an order
-              </Button>
-            </a>
+              </CtaLink>
           </div>
         </div>
       </div>

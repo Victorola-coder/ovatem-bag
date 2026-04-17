@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Award, GraduationCap, Sparkles } from "lucide-react";
-import { Button, Surface } from "@/app/components/ui";
+import { CtaLink, Surface } from "@/app/components/ui";
 import { TRAINING_PROGRAM } from "@/app/content/brand";
 
 export function TrainedBy() {
@@ -21,13 +20,13 @@ export function TrainedBy() {
               ))}
             </ul>
             <p className="text-xs text-white/40">{TRAINING_PROGRAM.duration}</p>
-            <div className="flex flex-wrap gap-3 pt-2">
-              <a href="/#contact">
-                <Button variant="primary">Ask about training</Button>
-              </a>
-              <Link href="/training-policy">
-                <Button variant="secondary">Training policy</Button>
-              </Link>
+            <div className="flex flex-wrap items-center gap-3 pt-2">
+              <CtaLink href="/#contact" variant="primary">
+                Ask about training
+              </CtaLink>
+              <CtaLink href="/training-policy" variant="secondary">
+                Training policy
+              </CtaLink>
             </div>
           </div>
 

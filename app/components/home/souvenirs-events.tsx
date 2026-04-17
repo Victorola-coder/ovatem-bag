@@ -1,6 +1,5 @@
-import Link from "next/link";
 import { Gift, Heart, PartyPopper } from "lucide-react";
-import { Button, Surface } from "@/app/components/ui";
+import { CtaLink, Surface } from "@/app/components/ui";
 
 const EVENTS = [
   {
@@ -47,13 +46,13 @@ export function SouvenirsEvents() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-3">
-          <a href="/#contact">
-            <Button variant="primary">Request a quote</Button>
-          </a>
-          <Link href="/shop">
-            <Button variant="secondary">Shop preview</Button>
-          </Link>
+        <div className="mt-12 flex flex-wrap items-center gap-3">
+          <CtaLink href="/#contact" variant="primary">
+            Request a quote
+          </CtaLink>
+          <CtaLink href="/shop" variant="secondary">
+            Shop preview
+          </CtaLink>
         </div>
       </div>
     </section>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Input, Surface } from "@/app/components/ui";
+import { Button, CtaLink, Input, Surface } from "@/app/components/ui";
 
 export function Contact() {
   return (
@@ -40,15 +40,18 @@ export function Contact() {
                 className="min-h-[132px] w-full resize-none rounded-xl border border-white/[0.08] bg-white/[0.03] p-4 text-[15px] text-white placeholder:text-white/35 focus:border-white/20 focus:outline-none"
               />
 
-              <div className="flex flex-wrap gap-3 pt-1">
+              <div className="flex flex-wrap items-center gap-3 pt-1">
                 <Button variant="primary" type="submit">
-                  Send
+                  Send message
                 </Button>
-                <a href="https://wa.me/" className="inline-flex" target="_blank" rel="noopener noreferrer">
-                  <Button variant="secondary" type="button">
-                    WhatsApp
-                  </Button>
-                </a>
+                <CtaLink
+                  href="https://wa.me/"
+                  variant="secondary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  WhatsApp
+                </CtaLink>
               </div>
 
               <p className="text-xs text-white/40">Form is a placeholder until backend or WhatsApp deep link is set.</p>

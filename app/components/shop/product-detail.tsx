@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Heart } from "lucide-react";
-import { Button, Surface } from "@/app/components/ui";
+import { CtaLink, Surface } from "@/app/components/ui";
 import { useWishlist } from "@/app/hooks/use-wishlist";
 import type { ShopProduct } from "@/app/lib/shop-products";
 
@@ -58,13 +58,13 @@ export function ProductDetail({ product }: { product: ShopProduct }) {
             </ul>
           </div>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="/#contact">
-              <Button variant="primary">Request this style</Button>
-            </Link>
-            <Link href="/shop">
-              <Button variant="secondary">Browse more</Button>
-            </Link>
+          <div className="flex flex-wrap items-center gap-3">
+            <CtaLink href="/#contact" variant="primary">
+              Request this style
+            </CtaLink>
+            <CtaLink href="/shop" variant="secondary">
+              Browse more
+            </CtaLink>
           </div>
 
           <p className="text-xs text-white/55">
