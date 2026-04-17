@@ -1,8 +1,10 @@
 import type { MetadataRoute } from "next";
+import { JOURNAL_POSTS } from "@/app/content/journal-posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://ovatem.ng";
-  const paths = [
+
+  const staticPaths = [
     "",
     "/shop",
     "/shop/signature-handbag",
@@ -15,10 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/returns",
     "/training-policy",
   ];
-  return paths.map((path) => ({
+
+  const blogPaths = JOURNAL_POSTS.map((p) => `/blog/${p.slug}`);
+
+  const all = [...staticPaths, ...blogPaths];
+
+  return all.map((path) => ({
     url: `${base}${path}`,
     lastModified: new Date(),
     changeFrequency: path === "" ? ("weekly" as const) : ("monthly" as const),
-    priority: path === "" ? 1 : 0.7,
+    priority: path === "" ? 1 : path.startsWith("/blog/") ? 0.65 : 0.7,
   }));
 }

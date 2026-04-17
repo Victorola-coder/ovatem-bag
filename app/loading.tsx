@@ -1,8 +1,8 @@
 import { Loader } from "@/app/components/global";
 
-export default function Spin() {
+export default function Loading() {
   return (
-    <div className="w-screen h-screen bg-body flex items-center justify-center">
+    <div className="flex min-h-screen w-full items-center justify-center bg-background">
       <Loader />
     </div>
   );

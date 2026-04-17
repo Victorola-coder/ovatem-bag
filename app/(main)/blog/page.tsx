@@ -1,45 +1,69 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PageShell } from "@/app/components/global";
 import { Surface } from "@/app/components/ui";
-import { BLOG_TOPIC_IDEAS } from "@/app/content/brand";
+import { JOURNAL_POSTS } from "@/app/content/journal-posts";
 
 export const metadata: Metadata = {
   title: "Journal | Ovatem",
   description:
-    "Stories on handmade bags in Nigeria, leather care, training, and behind-the-scenes craft — coming as articles go live.",
+    "Guides on handmade bags in Nigeria, leather care, training, and running a bag brand — from Ovatem.",
 };
+
+function formatDate(iso: string) {
+  return new Date(iso).toLocaleDateString("en-NG", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
 
 export default function BlogPage() {
   return (
-    <div className="mx-auto max-w-6xl px-5 py-12 md:py-16">
-      <div className="max-w-2xl space-y-3">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/60">Journal</p>
-        <h1 className="text-3xl font-semibold text-white md:text-4xl">Ideas &amp; resources</h1>
-        <p className="text-sm leading-relaxed text-white/75 md:text-base">
-          These topics are lined up to build organic traffic and position Ovatem as an expert in bags, souvenirs, and
-          training. Publish posts when you are ready — each title can become a full article.
-        </p>
-      </div>
+    <>
+      <PageShell
+        eyebrow="Journal"
+        title="Ideas &amp; resources"
+        description="Practical notes on quality, care, and craft — written to help you choose better, maintain longer, and understand how bags are made."
+      />
 
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
-        {BLOG_TOPIC_IDEAS.map((title) => (
-          <Surface key={title} className="p-6">
-            <p className="text-sm font-medium text-white/90">{title}</p>
-            <p className="mt-2 text-xs text-white/45">Draft — assign a slug and publish when written.</p>
-          </Surface>
-        ))}
-      </div>
+      <div className="mx-auto max-w-7xl px-6 pb-20 md:px-10 lg:px-12">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {JOURNAL_POSTS.map((post) => (
+            <Surface key={post.slug} className="flex flex-col p-6 md:p-7">
+              <time className="text-[11px] uppercase tracking-wider text-white/40" dateTime={post.date}>
+                {formatDate(post.date)}
+              </time>
+              <h2 className="mt-3 text-lg font-medium leading-snug text-white/95">
+                <Link href={`/blog/${post.slug}`} className="hover:text-white">
+                  {post.title}
+                </Link>
+              </h2>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-white/55">{post.excerpt}</p>
+              <div className="mt-6 flex items-center justify-between border-t border-white/[0.06] pt-5">
+                <span className="text-xs text-white/40">{post.readTime}</span>
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="text-sm font-medium text-brand-aquaHaze hover:text-white/90"
+                >
+                  Read
+                </Link>
+              </div>
+            </Surface>
+          ))}
+        </div>
 
-      <div className="mt-10 rounded-[24px] border border-dashed border-white/20 bg-white/[0.03] p-6 text-sm text-white/70">
-        <p>
-          <span className="font-medium text-white">SEO tip:</span> align each post with your keyword themes (handmade bags
-          in Nigeria, bag making training, souvenir branding) and use descriptive alt text on every image — see{" "}
-          <Link href="/brand" className="text-white underline underline-offset-4 hover:text-white/90">
-            brand &amp; SEO reference
-          </Link>
-          .
-        </p>
+        <Surface className="mt-12 p-6 md:p-8">
+          <p className="text-sm leading-relaxed text-white/65">
+            <span className="font-medium text-white/90">SEO:</span> align each article with your keyword themes and use
+            descriptive alt text on images. See the{" "}
+            <Link href="/brand" className="text-brand-aquaHaze underline underline-offset-4 hover:text-white">
+              brand &amp; SEO reference
+            </Link>{" "}
+            for tone and keywords.
+          </p>
+        </Surface>
       </div>
-    </div>
+    </>
   );
 }

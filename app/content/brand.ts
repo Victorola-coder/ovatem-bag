@@ -89,14 +89,7 @@ export const TRAINING_PROGRAM = {
   duration: "2-week intensive (schedule confirmed at enrollment)",
 } as const;
 
-/** Blog / resource topics — ship as editorial calendar or future posts. */
-export const BLOG_TOPIC_IDEAS = [
-  "How to choose a quality handbag",
-  "How to maintain leather bags",
-  "Bag trends in Nigeria",
-  "Behind the scenes: crafting a bag from cut to stitch",
-  "Starting a bag business: first steps",
-] as const;
+/** Published articles live in `app/content/journal-posts.ts` (Journal routes under `/blog`). */
 
 /** Future e-commerce — policy and UX placeholders until checkout goes live. */
 export const ECOMMERCE_PREP = {
