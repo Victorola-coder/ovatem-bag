@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "@/app/components/global";
 import { ShopCatalog } from "@/app/components/shop/shop-catalog";
 import { SHOP_PRODUCTS } from "@/app/lib/shop-products";
@@ -15,7 +16,16 @@ export default function ShopPage() {
       <PageShell
         eyebrow="Shop"
         title="Products"
-        description="Pricing shown as guides or on request. Save favourites with the heart (stored in your browser). For bespoke work, use Enquire or WhatsApp — we’ll confirm details and timelines."
+        description={
+          <>
+            Pricing shown as guides or on request. Save favourites with the heart (stored in your browser). For bespoke
+            work, use Enquire or WhatsApp — we’ll confirm details and timelines.{" "}
+            <Link href="/gallery" className="text-brand-aquaHaze underline underline-offset-4 hover:text-white">
+              View all photos in the gallery slideshow
+            </Link>
+            .
+          </>
+        }
       />
       <ShopCatalog products={SHOP_PRODUCTS} />
     </>

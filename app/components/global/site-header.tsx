@@ -47,6 +47,9 @@ export function SiteHeader() {
           <Link href="/shop" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Shop
           </Link>
+          <Link href="/gallery" className="text-[13px] text-white/55 transition-colors hover:text-white">
+            Gallery
+          </Link>
           <Link href="/blog" className="text-[13px] text-white/55 transition-colors hover:text-white">
             Journal
           </Link>
@@ -85,6 +88,13 @@ export function SiteHeader() {
               className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
             >
               Shop
+            </Link>
+            <Link
+              href="/gallery"
+              onClick={() => setIsOpen(false)}
+              className="rounded-md px-2 py-2.5 text-[14px] text-white/75 hover:bg-white/[0.04]"
+            >
+              Gallery
             </Link>
             <Link
               href="/blog"

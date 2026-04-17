@@ -1,13 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
+import NextImage from "next/image";
+import clsx from "clsx";
 import { Heart } from "lucide-react";
 import { CtaLink, Surface } from "@/app/components/ui";
 import { useWishlist } from "@/app/hooks/use-wishlist";
-import type { ShopProduct } from "@/app/lib/shop-products";
+import { productImageSrc, type ShopProduct } from "@/app/lib/shop-products";
 
 export function ProductDetail({ product }: { product: ShopProduct }) {
   const { toggle, has } = useWishlist();
+  const [activeIndex, setActiveIndex] = useState(0);
+  const images = product.images;
+  const mainSrc = images[activeIndex] ? productImageSrc(images[activeIndex]) : null;
 
   return (
     <div className="mx-auto max-w-7xl px-6 pb-20 pt-8 md:px-10 md:pt-10 lg:px-12">
@@ -16,14 +22,51 @@ export function ProductDetail({ product }: { product: ShopProduct }) {
       </Link>
 
       <div className="mt-10 grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <Surface className="overflow-hidden p-0">
-          <div className="relative aspect-square bg-white/[0.03]">
-            <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-white/45">
-              Add images to{" "}
-              <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5">public/images/products/{product.slug}</code>
+        <div className="space-y-4">
+          <Surface className="overflow-hidden p-0">
+            <div className="relative aspect-square bg-white/[0.03]">
+              {mainSrc ? (
+                <NextImage
+                  src={mainSrc}
+                  alt={`${product.title} — photo ${activeIndex + 1} — Ovatem`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center p-8 text-center text-sm text-white/45">
+                  Add images to <code className="mx-1 rounded bg-white/10 px-1.5 py-0.5">public/images/products/</code>
+                </div>
+              )}
             </div>
-          </div>
-        </Surface>
+          </Surface>
+
+          {images.length > 1 ? (
+            <div className="grid grid-cols-4 gap-2 sm:grid-cols-4">
+              {images.map((file, i) => (
+                <button
+                  key={file}
+                  type="button"
+                  onClick={() => setActiveIndex(i)}
+                  className={clsx(
+                    "relative aspect-square overflow-hidden rounded-md border-2 transition-colors",
+                    activeIndex === i ? "border-white/80" : "border-transparent opacity-80 hover:opacity-100"
+                  )}
+                  aria-label={`Show image ${i + 1}`}
+                >
+                  <NextImage
+                    src={productImageSrc(file)}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="120px"
+                  />
+                </button>
+              ))}
+            </div>
+          ) : null}
+        </div>
 
         <div className="space-y-8">
           <div>

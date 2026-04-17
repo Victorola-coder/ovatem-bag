@@ -1,9 +1,10 @@
+import type { ReactNode } from "react";
 import clsx from "clsx";
 
 type PageShellProps = {
   eyebrow?: string;
   title: string;
-  description?: string;
+  description?: ReactNode;
   children?: React.ReactNode;
   className?: string;
   /** When false, skips bottom border (e.g. before another full-bleed block). */

@@ -39,6 +39,9 @@ export function SiteFooter() {
             <Link className="hover:text-white/80" href="/shop">
               Shop preview
             </Link>
+            <Link className="hover:text-white/80" href="/gallery">
+              Gallery
+            </Link>
             <Link className="hover:text-white/80" href="/blog">
               Journal
             </Link>
