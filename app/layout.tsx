@@ -28,9 +28,6 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ovatem.ng"),
-  icons: {
-    icon: "/icon.png",
-  },
   title: "Ovatem Quality Bag",
   description:
     "Crafting Excellence. Every Style. Every Story. Premium, high-quality stylish bags and thoughtfully curated souvenirs for every occasion.",

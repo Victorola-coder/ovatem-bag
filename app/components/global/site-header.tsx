@@ -21,7 +21,13 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-background/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="/" className="flex items-center gap-3">
-          <Image src="/images/logo.svg" alt="Ovatem logo" width={32} height={32} className="rounded-md opacity-95" />
+          <Image
+            src="/images/logo.jpg"
+            alt="Ovatem logo"
+            width={36}
+            height={36}
+            className="rounded-md object-contain opacity-95"
+          />
           <div className="leading-tight">
             <p className="text-[13px] font-medium tracking-wide text-white/95">Ovatem</p>
             <p className="text-[11px] text-white/45">Quality Bag</p>

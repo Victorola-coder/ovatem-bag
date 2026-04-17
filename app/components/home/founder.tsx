@@ -38,7 +38,10 @@ export function Founder() {
               ) : (
                 <div className="flex h-full flex-col items-center justify-center gap-3 p-8 text-center">
                   <UserRound className="h-14 w-14 text-white/25" aria-hidden />
-                  <p className="text-sm text-white/45">Add <code className="text-white/60">public/images/founder.jpg</code></p>
+                  <p className="text-sm text-white/45">
+                    Add <code className="text-white/60">public/images/face.png</code> or update path in{" "}
+                    <code className="text-white/60">app/content/brand.ts</code>
+                  </p>
                 </div>
               )}
             </div>

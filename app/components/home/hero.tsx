@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NextImage from "next/image";
 import { Button, Image } from "@/app/components/ui";
 
 const PILLARS = [
@@ -48,36 +49,41 @@ export function Hero() {
           </div>
 
           <div className="lg:col-span-5">
-            <div className="overflow-hidden rounded-lg border border-white/[0.08] bg-white/[0.02]">
-              <div className="aspect-[4/5] w-full bg-[#0a3d31]">
-                <div className="flex h-full flex-col justify-between p-6 md:p-8">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex items-center gap-3">
-                      <Image
-                        src="/images/logo.svg"
-                        alt="Ovatem logo"
-                        width={40}
-                        height={40}
-                        className="rounded-md opacity-95"
-                      />
-                      <div className="leading-tight">
-                        <p className="text-xs font-medium uppercase tracking-wider text-white/80">Ovatem</p>
-                        <p className="text-[11px] text-white/45">Est. Nigeria</p>
-                      </div>
+            <div className="overflow-hidden rounded-lg border border-white/[0.08] bg-[#0a3d31]">
+              <div className="relative aspect-[4/5] w-full">
+                <NextImage
+                  src="/images/face.png"
+                  alt="Ovatem — founder and craft"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 420px"
+                  priority
+                />
+                <div
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#0c4c3c]/90 via-[#0c4c3c]/20 to-transparent"
+                  aria-hidden
+                />
+                <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                  <div className="mb-4 flex items-center gap-3">
+                    <Image
+                      src="/images/logo.jpg"
+                      alt="Ovatem logo"
+                      width={40}
+                      height={40}
+                      className="rounded-md object-contain opacity-95"
+                    />
+                    <div className="leading-tight">
+                      <p className="text-xs font-medium uppercase tracking-wider text-white/90">Ovatem</p>
+                      <p className="text-[11px] text-white/55">Est. Nigeria</p>
                     </div>
                   </div>
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/40">Lookbook</p>
-                    <p className="mt-3 text-sm leading-relaxed text-white/55">
-                      Place your hero product shot here — soft light, neutral backdrop, one strong focal bag.
-                    </p>
-                  </div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-white/50">Lookbook</p>
+                  <p className="mt-2 text-sm leading-relaxed text-white/80">
+                    Handmade quality, personal service — bags and souvenirs for life&apos;s occasions.
+                  </p>
                 </div>
               </div>
             </div>
-            <p className="mt-4 text-center text-[11px] text-white/35">
-              Replace this block with photography when ready.
-            </p>
           </div>
         </div>
       </div>

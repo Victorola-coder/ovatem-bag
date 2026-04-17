@@ -69,8 +69,8 @@ export const TRUST_STATS = [
 
 export const FOUNDER = {
   name: "Founder, Ovatem",
-  /** Add `public/images/founder.jpg` — the UI falls back until the file exists. */
-  imageSrc: "/images/founder.jpg",
+  /** Portrait in `public/images/` (e.g. face.png). */
+  imageSrc: "/images/face.png",
   bio: [
     "I’m the face behind Ovatem — every piece reflects a commitment to premium finishing and honest craft. When you order or train with us, you work directly with that standard.",
     "Replace this paragraph with your story: how you started, what you stand for, and why clients and students trust Ovatem.",
